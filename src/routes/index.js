@@ -18,9 +18,9 @@ const { getProfils } = require("../controllers/profil");
 // Route
 
 //user
-router.post('/user', auth, addUsers)
-router.get('/users', auth, getUsers)
-router.get('/user/:id', auth, getUser)
+router.post('/user', addUsers)
+router.get('/users', getUsers)
+router.get('/user/:id', getUser)
 router.patch('/user/:id', auth, updateUser)
 router.delete('/user/:id', auth, deleteUser)
 //product
@@ -33,7 +33,7 @@ router.delete('/product/:id', auth, deleteProduct)
 router.get('/transactions', auth, getTransactions)
 router.post('/transaction', auth, addTransaction)
 //category
-router.get('/categories', auth, getCategories)
+router.get('/categories', getCategories)
 router.get('/category/:id', auth, getCategory)
 router.post('/category', auth, addCategory)
 router.patch('/category/:id', auth, updateCategory)
